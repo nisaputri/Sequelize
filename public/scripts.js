@@ -1,6 +1,9 @@
 async function populateRestaurants() {
-    const diningRequest = await fetch('/api/meals');
+    const diningRequest = await fetch('/api/dining/');
     const diningData = await diningRequest.json();
+
+    const dinningList = [];
+    dinningList.push(diningData.data);
 
     diningData.data.forEach((restaurant) => {
         const name = restaurant.hall_name;
@@ -11,25 +14,7 @@ async function populateRestaurants() {
 
         appendItem.classList.add('tile', 'has-text-centered', 'is-parent', 'us-3');
         appendItem.innerHTML = 
-        `
-        <article class="tile is-child box has-background-link-dark ">
-        <td>name</td>
-        <td>location</td>`
-
-
-        /* `
-        <article class="tile is-child box has-background-link-dark ">
-        <span class="subtitle has-text-light has-text-weight-bold>
-            ${restaurant.hall_name}</span>
-        <br />
-        <span class="has-text-light">
-         ${restaurant.hall_address.split(',')[0]}
-         </span>
-         <span class="has-text-light">
-         ${restaurant.hall_address.split(',')[1]}
-         </span>
-         </article>`;
-         */
+        `<td>${id}</td> <td>${name}</td> <td>${location}</td>`;
 
     targetBox.append(appendItem);
     });
