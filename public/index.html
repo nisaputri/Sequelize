@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nisa Putri's Lab 8</title>
+    <title>Nisa Putri's Meal Retrival</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <section class="section">
       <div class="has-background-primary-light">
         <div class="container is-max-desktop">
-          <h1>Nisa Putri's Lab 8</h1>
-          
+          <h1 class="title is-1">Nisa Putri's Meal Retrival</h1>
+
+          <div id="chartContainer" style="height: 370px; width: 100%"></div>
+
           <table class="table">
             <thead>
               <tr>
@@ -25,12 +28,12 @@
                 <th>Dining Location</th>
               </tr>
             </thead>
-            <tbody id="targetBox"> 
-
-            </tbody>
+            <tbody id="targetBox"></tbody>
+          </table>
         </div>
       </div>
     </section>
     <script src="scripts.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   </body>
 </html>
